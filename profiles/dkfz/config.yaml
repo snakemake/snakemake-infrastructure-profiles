@@ -99,7 +99,7 @@ default-resources:
   # queue that is not overcrowded. For things that run longer (or shorter), add a rule-
   # specific queue under `set-resources` below. For available queues, see:
   # https://wiki.odcf.dkfz.de/pub/cluster/lsf/quickref#queues
-  lsf_queue: "long-debian"
+  lsf_queue: "long"
 
   # The ODCF cluster does not work with projects, but we have seen the
   # lsf plugin throw an error during its attempt to nevertheless infer
