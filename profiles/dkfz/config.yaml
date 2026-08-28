@@ -69,9 +69,11 @@ max-threads: 64
 # 
 # This is meant as a good balance between not wasting time because snakemake
 # hasn't yet checked for the status of jobs that have already finished, vs.
-# sending too many queries to the cluster system. This might need further
-# adjustment, should we find it inadequate for either of the two.
-seconds-between-status-checks: 20
+# sending too many queries to the cluster system. Also, this respects the
+# minimum duration of one minute between subsequent queries that the cluster
+# admins ask for in the wiki:
+# https://wiki.odcf.dkfz.de/pub/cluster/overview#things_not_to_do
+seconds-between-status-checks: 60
   
 # Always use conda environments for software deployment. Internally snakemake
 # implicitly uses mamba for speed (at the time of writing).
