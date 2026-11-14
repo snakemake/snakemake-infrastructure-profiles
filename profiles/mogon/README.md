@@ -18,9 +18,13 @@ Due to quota limitations in the home directory, we recommend using `--sdm conda`
 
 We recommend setting `--default-resources slurm_account=<account> slurm_cluster=mogonnhr` for users of Mogon-NHR and `--default-resources slurm_account=<account> slurm_cluster=mogonki`, respectively.
 
-.. note:: Currently (as of Feb. 2026) a value `TMOUT` is set on the login node effectively triggering the shell to send `SIGHUP` to all daughter processes (interactive jobs, detached multiplexers and the login shell anyhow) after a certain time period of inactivity. Only disowning a Snakemake process with `disown` or `nohup` will allow a long-running workflow to continue.
+[!NOTE]
+Currently (as of Feb. 2026) a value `TMOUT` is set on the login node effectively triggering the shell to send `SIGHUP` to all daughter processes (interactive jobs, detached multiplexers and the login shell anyhow) after a certain time period of inactivity. Only disowning a Snakemake process with `disown` or `nohup` will allow a long-running workflow to continue.
 
 ## Maintainer
+
+[!NOTE]
+As of August 2026, there is no maintainer for this profile.
 
 | | |
 |---|---|
